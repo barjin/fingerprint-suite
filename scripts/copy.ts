@@ -24,7 +24,7 @@ function rewrite(path: string, replacer: (from: string) => string): void {
 }
 
 /**
- * Checks next dev version number based on the `@crawlee/core` package via `npm show`.
+ * Checks next dev version number based on the `fingerprint-injector` package via `npm show`.
  * We always use this package, so we ensure the version is the same for each package in the monorepo.
  */
 function getNextVersion() {
