@@ -31,7 +31,8 @@ jobs:
                     git fetch --unshallow
                     git checkout prepublish
                     git merge -s recursive --squash --no-commit main
-                    git commit -a -m "[skip ci] Automatic sync from main"
+                    git add -A
+                    git diff-index --quiet HEAD || git commit -m "[skip ci] Automatic sync from main"
 
                     git push origin prepublish
     lint:
